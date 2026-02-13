@@ -56,12 +56,47 @@ public class Robot extends Figura{
         // Ojos
         ojoIzq = new Circulo();
         ojoIzq.getDimension().setDimension(10, 10);
-        ojoIzq.setColor(0);
+        ojoIzq.setColor(0xFFFF0000);
 
         ojoDer = new Circulo();
         ojoDer.getDimension().setDimension(10, 10);
-        ojoDer.setColor(0);
+        ojoDer.setColor(0xFFFF0000);
     }
+    
+    public void cambiarColorCabeza(int color) {
+    cabeza.setColor(color);
+    }
+
+    public void cambiarColorCuerpo(int color) {
+    cuerpo.setColor(color);
+    }
+
+    public void cambiarColorBrazos(int color) {
+    brazoIzq.setColor(color);
+    brazoDer.setColor(color);
+    }
+
+    public void cambiarColorPiernas(int color) {
+    piernaIzq.setColor(color);
+    piernaDer.setColor(color);
+    }
+
+    public void cambiarColorOjos(int color) {
+    ojoIzq.setColor(color);
+    ojoDer.setColor(color);
+    }
+    
+    public void cambiarColorRobotCompleto(int color){
+        cabeza.setColor(color);
+        cuerpo.setColor(color);
+        brazoIzq.setColor(color);
+        brazoDer.setColor(color);
+        piernaIzq.setColor(color);
+        piernaDer.setColor(color);
+        ojoIzq.setColor(color);
+        ojoDer.setColor(color);
+    }
+
 
     public void dibujar(PApplet p) {
 
@@ -72,12 +107,12 @@ public class Robot extends Figura{
         brazoDer.getPosicion().setPosicion(x + 70, y + 70);
 
         piernaIzq.getPosicion().setPosicion(x + 5, y + 160);
-        piernaDer.getPosicion().setPosicion(x + 40, y + 160);
+        piernaDer.getPosicion().setPosicion(x + 35, y + 160);
 
         ojoIzq.getPosicion().setPosicion(x + 15, y + 20);
         ojoDer.getPosicion().setPosicion(x + 35, y + 20);
 
-        // Dibujar todo
+        
         cabeza.dibujar(p);
         cuerpo.dibujar(p);
         brazoIzq.dibujar(p);
